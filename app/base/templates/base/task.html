@@ -1,4 +1,10 @@
 {% extends 'base/main.html' %}
 {% block content %}
 <h1>Task: {{task}}</h1>
+<h2>Description: {{task.description}}</h2>
+<h3>
+    {% if task.complete %}
+    <p><input type="checkbox" name="a" value="{{task.complete}}"> Complete</p>
+    {{task.complete}}</h3>
+    {% endif %}
 {% endblock content %}
